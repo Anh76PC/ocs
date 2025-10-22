@@ -1,10 +1,11 @@
-# services/ocs-inventory/metadata.yaml
 displayName: OCS Inventory NG
-description: Hệ thống quản lý và kiểm kê tài sản mạng (Network Inventory and Asset Management System).
+description: OCS Inventory management server (Apache + MariaDB + Perl web interface)
 category:
   - logging
 overview: >
-  # OCS Inventory NG
-  OCS Inventory NG là giải pháp miễn phí/mã nguồn mở cho phép quản lý thông tin kiểm kê các tài sản được kết nối mạng.
+  # OCS Inventory
+  OCS Inventory NG helps you keep track of IT assets in your infrastructure.
+  It collects information about hardware and software from all computers
+  and stores them in a MariaDB backend.
+icon: PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIHN0eWxlPSJmaWxsOiM0YjgzZmYiLz48dGV4dCB4PSI0MCIgeT0iMTAwIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSIxNiI+T0NTPC90ZXh0Pjwvc3ZnPg==
 scope: project
-# icon: <Base64 encoded SVG icon> # Tùy chọn
