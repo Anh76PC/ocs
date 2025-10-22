@@ -45,6 +45,9 @@ spec:
         database: "ocs"
         username: "ocs"
         password: "ocs"
+    service:
+      type: ClusterIP
+      port: 80
     ingress:
       enabled: false # Mặc định tắt, có thể ghi đè khi triển khai
       hosts:
