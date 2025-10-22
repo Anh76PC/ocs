@@ -40,6 +40,9 @@ spec:
       storageClass: "localvolumeprovisioner"
     mariadb:
       enabled: true
+      image:
+          # Thay thế tag bị lỗi bằng tag 'latest'
+          tag: latest
       auth:
         rootPassword: "ocs"
         database: "ocs"
