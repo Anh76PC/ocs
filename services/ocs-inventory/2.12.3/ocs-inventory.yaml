@@ -1,0 +1,59 @@
+# services/ocs-inventory/2.9/ocs-inventory.yaml
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: ${releaseName}
+  namespace: ${releaseNamespace} # Namespace của Project
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: ocsinventory
+      version: 2.12.3 # Phiên bản Chart
+      sourceRef:
+        kind: HelmRepository
+        name: ocs-inventory-repo
+        namespace: kommander-flux
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Tham chiếu đến ConfigMap chứa các giá trị mặc định của Helm Chart
+  valuesFrom:
+    - kind: ConfigMap
+      name: ${releaseName}-default-values
+      optional: true
+      valuesKey: values.yaml
+  # Giá trị mặc định (default values) cho Helm Chart
+  values:
+    # --- Cấu hình tương ứng với values.yaml của bạn ---
+    image:
+      tag: "2.9"
+    replicaCount: 1
+    persistence:
+      enabled: true
+      size: 10Gi
+      accessMode: ReadWriteOnce
+      storageClass: "localvolumeprovisioner"
+    mariadb:
+      enabled: true
+      auth:
+        rootPassword: "ocs"
+        database: "ocs"
+        username: "ocs"
+        password: "ocs"
+    ingress:
+      enabled: false # Mặc định tắt, có thể ghi đè khi triển khai
+      hosts:
+        - "ocs.anhpc.local"
+      tls: true
+      # ... các annotations và basicauth khác (sẽ nằm trong ConfigMap defaults hoặc ConfigOverrides)
+    resources:
+      limits:
+        cpu: 200m
+        memory: 512Mi
+      requests:
+        cpu: 100m
+        memory: 256Mi

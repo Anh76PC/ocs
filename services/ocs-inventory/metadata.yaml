@@ -1,0 +1,11 @@
+# services/ocs-inventory/metadata.yaml
+displayName: OCS Inventory NG
+description: Hệ thống quản lý và kiểm kê tài sản mạng (Network Inventory and Asset Management System).
+category:
+  - infrastructure
+  - inventory
+overview: >
+  # OCS Inventory NG
+  OCS Inventory NG là giải pháp miễn phí/mã nguồn mở cho phép quản lý thông tin kiểm kê các tài sản được kết nối mạng.
+scope: project
+# icon: <Base64 encoded SVG icon> # Tùy chọn

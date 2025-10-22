@@ -1,0 +1,9 @@
+# helm-repositories/ocs-repo/ocs-repo.yaml
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: ocs-inventory-repo
+  namespace: kommander-flux # Thường là namespace mặc định cho Catalog
+spec:
+  interval: 1h
+  url: https://ocsinventory-ng.github.io/helm-charts

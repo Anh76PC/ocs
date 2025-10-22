@@ -1,0 +1,6 @@
+# services/ocs-inventory/2.9/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ocs-inventory.yaml
+  - ../../../helm-repositories/ocs-repo # Thêm HelmRepo
