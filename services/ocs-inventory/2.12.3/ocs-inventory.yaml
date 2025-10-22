@@ -13,8 +13,8 @@ spec:
       version: 2.12.3 # Phiên bản Chart
       sourceRef:
         kind: HelmRepository
-        name: ocs-inventory-repo
-        namespace: kommander-flux
+        name: ocs-inventory-ocs-inventory-repo
+        namespace: project-test-fq47f
   install:
     remediation:
       retries: 3
