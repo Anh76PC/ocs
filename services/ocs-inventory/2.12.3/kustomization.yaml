@@ -1,6 +1,9 @@
-# services/ocs-inventory/2.9/kustomization.yaml
+# services/ocs-inventory/2.12.3/kustomization.yaml
+
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ocs-inventory.yaml
-  - ../../../helm-repositories/ocs-repo # Thêm HelmRepo
+  - ../../../helm-repositories/ocs-repo
+# Thêm tiền tố. Tiền tố này thường là tên ứng dụng + dấu gạch ngang.
+namePrefix: ocs-inventory-
