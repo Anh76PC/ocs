@@ -1,0 +1,5 @@
+# services/ocs-inventory/2.12.3/defaults/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - cm.yaml
