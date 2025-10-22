@@ -10,7 +10,7 @@ spec:
   chart:
     spec:
       chart: ocsinventory
-      version: 2.12.3 # Phiên bản Chart
+      version: 2.12.1 # Phiên bản Chart
       sourceRef:
         kind: HelmRepository
         name: ocs-inventory-ocs-inventory-repo
